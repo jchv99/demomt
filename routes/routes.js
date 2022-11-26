@@ -41,10 +41,6 @@ router.get('/profile', async(req, res) => {
     res.render('profile');
 });
 
-router.get('/loginAuth', async(res, res) => {
-    
-})
-
 router.get('/profile/:userid', async (req,res) => {
     let products = await new Product().getProductsOwned(req.params.userid);
     console.log(products)
