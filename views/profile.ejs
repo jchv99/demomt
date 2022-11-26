@@ -1,0 +1,42 @@
+<%- include ("./_partials/header") %>
+<%- include ("./_partials/navbar") %>
+
+
+<section>
+  <div class="login">
+      <h1 class="heading"> <span> Revisa tu perfil </h1>
+
+        <div class="containerlogin">
+          <div class="title">Cambia los Datos de tus Productos</div>
+          <div class="content">
+            <form action="#"> 
+              <div class="user-details">
+                <% if(products.length == 0) {%>
+                <div class="blog-post">
+                  <h2 class="blog-post-title">No has publicado ningún producto. ¡Agrega uno haciendo click arriba!</h2>
+                </div>
+                <%}%>
+                <% for (var i = 0; i < products.length; i++) { %>
+                  <div class="icons">
+                    <a href="#" class="cart-btn">Update</a>
+                  </div>
+                  <div class="icons">
+                    <a href="#" class="cart-btn">Delete</a>
+                  </div>
+                  <div class="input-box">
+                    <span class="details"> Current Name: <%=products[i].name%></span>
+                    <input type="text" name = "name" placeholder="<%=products[i].name%>" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Current Price: <%=products[i].price%></span>
+                    <input type="text" name = "price" placeholder="$ <%=products[i].price%>" required>
+                  </div>
+                <%}%>
+              </div>
+            </form>
+          </div>
+        </div>
+  </div>
+</section>
+
+<%- include ("./_partials/footer") %>

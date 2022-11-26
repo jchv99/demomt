@@ -1,0 +1,39 @@
+<%- include ("./_partials/header") %>
+<%- include ("./_partials/navbar") %>
+
+<section class="login" id="register">
+
+    <h1 class="heading"> <span> Mira Nuestros Productos </h1>
+
+        <div class="containerlogin">
+            <div class="title">Catalogo de Productos</div>
+            <div class="content">
+              <form action="#">
+                <div class="user-details">
+                    <% if(products.length == 0) {%>
+                        <div class="blog-post">
+                          <h2 class="blog-post-title">No has publicado ningún producto. ¡Agrega uno haciendo click arriba!</h2>
+                        </div>
+                    <%}%>
+                    <% for (var i = 0; i < products.length; i++) { %>
+                            <div class="box" style="margin-left: auto; margin-right: auto;">
+                                <div class="image">
+                                    <img src="pen.jpeg" height = 100px alt="">
+                                    <div class="icons">
+                                        <a href="#" class="cart-btn">AGREGAR</a>
+                                    </div>
+                                </div>
+                                <div class="content" >
+                                    <h3><%=products[i].name%></h3>
+                                    <div class="price"> <%=products[i].price%></div>
+                                </div>
+                            </div>
+                    <%}%>
+                </div>
+              </form>
+            </div>
+        </div>
+
+</section>
+
+<%- include ("./_partials/footer") %>

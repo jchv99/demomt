@@ -1,0 +1,70 @@
+<%- include ("./_partials/header") %>
+<%- include ("./_partials/navbar") %>
+
+<!--seccion de login empieza-->
+<section class="login" id="register">
+
+    <h1 class="heading"> <span> ¡Registrate! </h1>
+
+    <div class="containerlogin">
+        <div class="title">Registro</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Nombre completo</span>
+                <input type="text" name="fullName" id= "name" placeholder="Ingresa tu nombre" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Usuario</span>
+                <input type="text" name="username" id = "username" placeholder="Ingresa tu usuario" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" name="email" id = "email" placeholder="Ingresa tu email" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Numero de celular</span>
+                <input type="text" name="phoneNumber" id = "cel" placeholder="Ingresa tu numero" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Contraseña</span>
+                <input type="password" name="password" id = "pass" placeholder="Ingresa tu contraseña" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Confirma Contraseña</span>
+                <input type="password" name="confirmPassword" id = "confirmPass" placeholder="Confirma tu contraseña" required>
+              </div>
+            </div>
+            <div class="gender-details">
+              <input type="radio" id = "hom" name="gender" id="dot-1">
+              <input type="radio" id = "muj" name="gender" id="dot-2">
+              <input type="radio" id = "ND" name="gender" id="dot-3">
+              <span class="gender-title">Genero</span>
+              <div class="category">
+                <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Hombre</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Mujer</span>
+              </label>
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="gender">Prefiero no decir</span>
+                </label>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Registrarse">
+            </div>
+          </form>
+          <div> ¿Ya tienes cuenta? <a href="login"> Inicia Sesion </a> </div>
+        </div>
+      </div>
+    
+</section>
+<!--seccion de login termina-->
+
+<%- include ("./_partials/footer") %>

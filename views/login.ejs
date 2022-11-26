@@ -1,0 +1,32 @@
+<%- include ("./_partials/header") %>
+<%- include ("./_partials/navbar") %>
+
+<section class="login" id="login">
+
+    <h1 class="heading"> <span> Inicia Sesion </h1>
+
+    <div class="containerlogin">
+        <div class="title">Iniciar Sesion</div>
+        <div class="content">
+          <form action="loginAuth">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Usuario</span>
+                <input name="email" type="email" placeholder="Ingresa tu correo" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Contraseña</span>
+                <input name="password" type="password" placeholder="Ingresa tu contraseña" required>
+              </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Inicia Sesion">
+            </div>
+          </form>
+          <div> ¿No tienes cuenta? <a href="register"> Registrate </a> </div>
+        </div>
+      </div>
+    
+</section>
+
+<%- include ("./_partials/footer") %>

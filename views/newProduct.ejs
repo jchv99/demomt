@@ -1,0 +1,37 @@
+<%- include ("./_partials/header") %>
+<%- include ("./_partials/navbar") %>
+
+<section class="login" id="register">
+
+  <h1 class="heading"> <span> ¡Da de alta un Producto! </h1>
+        <div class="containerlogin">
+          <div class="title">Alta de Producto</div>
+          <div class="content">
+            <form action="/api/newProduct" method="post">
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">Nombre del Producto</span>
+                  <input type="text" name="name" id = "nameProd" placeholder="Ingresa el Nombre del Producto" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Precio del Producto</span>
+                  <input type="text" name="price" id = "priceProd" placeholder="Ingresa el Precio del Producto" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">ID del Owner</span>
+                  <input type="text" name="ownerID" id = "idOwner" placeholder="Ingresa el ID del Owner" required>
+                </div>
+
+                <!-- <div>
+                  <label for="img">Select image:</label>
+                  <input type="file" id="img" name="img" accept="image/*">
+                </div> -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+</section>
+
+
+<%- include ("./_partials/footer") %>

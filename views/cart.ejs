@@ -1,0 +1,94 @@
+<%- include ("./_partials/header") %>
+<%- include ("./_partials/navbar") %>
+
+<section>
+    <div class="Cart-Container">
+        <div class="HeaderSC">
+            <h3 class="HeadingSC">Shopping Cart</h3>
+            <h5 class="ActionSC">Remove all</h5>
+        </div>
+
+        <div class="Cart-ItemsSC">
+            <div class="image-boxSC">
+                <img src="img-1.jpg" width = 100px height = 100px/>
+            </div>
+
+            <div class="aboutSC">
+                <h1 class="titleSC">Brownies</h1>
+                <h3 class="subtitleSC">a;sohfa;woifh;asdofh;saof sdoifhhalidfhlasidfg lasidufgh lasiddfg lasifg alsidfg asldifhg la</h3>
+            </div>
+
+            <!--
+            <div class="counterSC">
+                <div class="plus">+</div>
+                <div class="num">01</div>
+                <div class="minus">-</div>
+            </div>
+            -->
+            <div class="pricesSC">
+                <div class="amountSC">$2.99</div>
+                <div class="removeSC"><u>Remove</u></div>
+            </div>
+        </div>
+
+        <div class="Cart-ItemsSC">
+            <div class="image-boxSC">
+                <img src="img-1.jpg" width = 100px height = 100px/>
+            </div>
+
+            <div class="aboutSC">
+                <h1 class="titleSC">Brownies</h1>
+                <h3 class="subtitleSC">a;sohfa;woifh;asdofh;saof sdoifhhalidfhlasidfg lasidufgh lasiddfg lasifg alsidfg asldifhg la</h3>
+            </div>
+            <!--
+            <div class="counterSC">
+                <div class="plus">+</div>
+                <div class="num">01</div>
+                <div class="minus">-</div>
+            </div>
+            -->
+              
+
+            <div class="pricesSC">
+                <div class="amountSC">$2.99</div>
+                <div class="removeSC"><u>Remove</u></div>
+            </div>
+        </div>
+
+        <hr> 
+            <div class="checkoutSC">
+            <div class="totalSC">
+            <div>
+            <div class="SubtotalSC">Sub-Total</div>
+            </div>
+            <div class="total-amountSC">$2.99</div>
+            </div>
+            <button class="buttonSC">Checkout</button>
+            </div>
+        </hr>    
+        
+    </div>
+</section>
+
+
+<%- include ("./_partials/footer") %>
+
+<script>
+    const plus = document.querySelector(".plus"),
+     minus = document.querySelector(".minus"),
+     num = document.querySelector(".num");
+     let a = 1;
+     plus.addEventListener("click", ()=>{
+       a++;
+       a = (a < 10) ? "0" + a : a;
+       num.innerText = a;
+     });
+ 
+     minus.addEventListener("click", ()=>{
+       if(a > 1){
+         a--;
+         a = (a < 10) ? "0" + a : a;
+         num.innerText = a;
+       }
+     });
+</script>
